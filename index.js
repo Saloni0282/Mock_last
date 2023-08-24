@@ -9,7 +9,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
+app.get('/', (req, res) => {
+    res.send("Home Page");
+})
 app.use(userRouter);
 app.use(authenticate);
 app.use(blogRouter);
